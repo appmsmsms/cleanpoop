@@ -1,6 +1,6 @@
 {
   "manifest_version": 3,
-  "name": "CleanPoop",
+  "name": "AntiPoop - FB Algorithm Cleaner",
   "version": "1.0.0",
   "description": "Oculta posts del feed de Facebook que contengan ciertas keywords (nombres de influencers, hashtags, etc).",
   "permissions": ["storage"],
