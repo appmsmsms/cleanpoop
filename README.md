@@ -2,6 +2,10 @@
 
 Extensión de Chrome que oculta posts del feed de Facebook por palabra clave (nombres, hashtags, etc.), opcionalmente bloquea anuncios, y puede disparar la acción real "Not interested" de Facebook (no solo esconderlo visualmente) para entrenar el algoritmo.
 
+## Screenshots
+
+<img src="screenshots/popup-empty.png" width="260" alt="Popup sin keywords" /> <img src="screenshots/popup-active.png" width="260" alt="Popup con stats" />
+
 ## Funciones
 
 - Oculta posts del feed (texto, video, reels) que contengan alguna keyword configurada.
