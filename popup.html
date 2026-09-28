@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8" />
+<title>CleanPoop</title>
+<style>
+  body { font-family: system-ui, sans-serif; width: 300px; padding: 12px; }
+  h1 { font-size: 14px; margin: 0 0 8px; }
+  h2 { font-size: 12px; margin: 14px 0 6px; color: #444; text-transform: uppercase; letter-spacing: .03em; }
+  ul { list-style: none; margin: 0; padding: 0; max-height: 160px; overflow-y: auto; }
+  li { display: flex; align-items: center; justify-content: space-between; padding: 5px 6px; border-radius: 4px; font-size: 13px; }
+  li:hover { background: #f2f2f2; }
+  .kw { flex: 1; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; margin-right: 6px; }
+  .count { background: #e7e7e7; border-radius: 10px; padding: 1px 8px; font-size: 12px; color: #333; margin-right: 6px; }
+  .del { border: none; background: none; color: #a11; cursor: pointer; font-size: 14px; line-height: 1; padding: 2px 6px; }
+  .del:hover { color: #f00; }
+  .empty { font-size: 12px; color: #888; padding: 6px 2px; }
+  textarea { width: 100%; height: 70px; box-sizing: border-box; font-size: 13px; }
+  button#add { margin-top: 6px; width: 100%; padding: 6px; cursor: pointer; }
+  p.hint { font-size: 11px; color: #666; margin: 4px 0 0; }
+  #status { font-size: 12px; color: green; margin-top: 6px; height: 14px; }
+
+  .adsRow { display: flex; align-items: center; justify-content: space-between; padding: 6px; background: #f7f7f7; border-radius: 6px; }
+  .adsLabel { font-size: 13px; }
+  .adsCount { font-size: 11px; color: #666; }
+
+  .switch { position: relative; display: inline-block; width: 36px; height: 20px; flex-shrink: 0; }
+  .switch input { opacity: 0; width: 0; height: 0; }
+  .slider { position: absolute; cursor: pointer; inset: 0; background-color: #ccc; transition: .2s; border-radius: 20px; }
+  .slider::before { position: absolute; content: ""; height: 14px; width: 14px; left: 3px; bottom: 3px; background-color: white; transition: .2s; border-radius: 50%; }
+  input:checked + .slider { background-color: #2e7d32; }
+  input:checked + .slider::before { transform: translateX(16px); }
+</style>
+</head>
+<body>
+  <h1>💩 CleanPoop</h1>
+
+  <h2>Anuncios (Sponsored)</h2>
+  <div class="adsRow">
+    <div>
+      <div class="adsLabel">Bloquear anuncios</div>
+      <div class="adsCount" id="adsCount">0 ocultados</div>
+    </div>
+    <label class="switch">
+      <input type="checkbox" id="hideAdsToggle" />
+      <span class="slider"></span>
+    </label>
+  </div>
+
+  <h2>Acción real de Facebook</h2>
+  <div class="adsRow">
+    <div>
+      <div class="adsLabel">Usar "Ocultar/Ver menos" real</div>
+      <div class="adsCount">entrena el algoritmo de FB, no solo esconde visual</div>
+    </div>
+    <label class="switch">
+      <input type="checkbox" id="realHideToggle" />
+      <span class="slider"></span>
+    </label>
+  </div>
+
+  <h2>Estadísticas por keyword</h2>
+  <ul id="stats"></ul>
+
+  <h2>Agregar keywords</h2>
+  <textarea id="newKeywords" placeholder="una por línea, ej:&#10;nombre influencer&#10;#hashtag"></textarea>
+  <button id="add">Agregar</button>
+  <p class="hint">Se oculta cualquier post cuyo texto contenga una de estas palabras (no distingue mayúsculas).</p>
+  <div id="status"></div>
+
+  <script src="popup.js"></script>
+</body>
+</html>
