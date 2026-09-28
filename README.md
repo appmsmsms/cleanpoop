@@ -1,4 +1,4 @@
-# CleanPoop 💩
+# AntiPoop - FB Algorithm Cleaner 💩
 
 Extensión de Chrome que oculta posts del feed de Facebook por palabra clave (nombres, hashtags, etc.), opcionalmente bloquea anuncios, y puede disparar la acción real "Not interested" de Facebook (no solo esconderlo visualmente) para entrenar el algoritmo.
 
